@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167bf7;
+    --cor-fundo: #00030c;
+    --font-primaria: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--branco-principal);
+    font-family: var(--font-primaria);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.principal {
+    background-image: url("../img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__caixa {
+    margin: 0 5.75em;
+}
+
+.container.titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__link {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 1px solid var(--branco-principal);
+}
+
+.container__aviso {
+    color: var(--cinza-secundario);
+    font-size: 0.75rem;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__img {
+    width: 90%;
+}
+
+.descricao__titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos {
+    text-align: center; 
+}
+
+.dispositivos__titulos {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 3em 0 5em 0;
+}
+
+.lista__item {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin-top: 9em;
+    margin-bottom: 6.25em;
+}
+
+.rodape__logo{
+    margin-bottom: 2.5em;
+}
+
+.rodape__lista {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.lista__link {
+    list-style-type: none;
+}
+
+.lista__link a {
+    color: var(--branco-principal);
+    text-decoration: none;
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    margin: 2em 8.3em;
+}
+
+/* Edição hover */
+
+.container__link:hover {
+    transition: 1s;
+    background-color: var(--branco-principal);
+    color: var(--botao-azul);
+}
+
+.botao_secundario:hover {
+    background-color: var(--branco-principal);
+    border: 1px solid black;
+    color: var(--cor-fundo);
+}
+
+.secundario__botao:hover {
+    background-color: var(--branco-principal);
+    color: var(--botao-azul);
+}
+
+.lista__link a:hover {
+    transition: 1s;
+    color: var(--botao-azul);
+}
+
+/* Edição responsiva */
+
+@media (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .principal {
+        background-image: url("../img/backgroundedit.png");
+    }
+
+    .secundario {
+        text-align: center;
+        margin: 5em 2em;
+    }
+
+    .secundario__img {
+        width: 100%;
+    }
+
+    .container__caixa {
+        margin: 5em 2em;
+    }
+
+    .container__imagem {
+        width: 100%;
+    }
+
+    .dispositivos__lista {
+        flex-direction: column;
+    }
+
+    .rodape__lista {
+        flex-direction: column;
+    } 
+
+    .rodape__texto {
+        margin: 2em 1.5em;
+    }
+
+}
+
+@media (min-width:500px) and (max-width: 1050px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .principal {
+        background-image: url("../img/backgroundedit.png");
+        background-size: contain;
+    }
+
+    .secundario {
+        text-align: center;
+        margin: 5em 2em;
+        padding-bottom: 15em;
+    }
+
+    .secundario__img {
+        width: 100%;
+    }
+
+    .container__caixa {
+        margin: 15em 2em;
+    }
+
+    .container__imagem {
+        width: 100%;
+    }
+
+    .dispositivos__lista {
+        flex-direction: column;
+    }
+
+    .rodape__lista {
+        flex-direction: column;
+    } 
+
+    .rodape__texto {
+        margin: 2em 1.5em;
+    }
+
+
+}
